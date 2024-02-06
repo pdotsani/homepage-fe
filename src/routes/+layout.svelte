@@ -17,9 +17,12 @@
   .navigation {
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
   }
 
   a {
+    color: bisque;
+    text-decoration: none;
     margin: 0 5px;
   }
 </style>

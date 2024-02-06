@@ -1,4 +1,5 @@
 <script>
+  import { PUBLIC_PROFILE_IMAGE_URL } from "$env/static/public";
   export let data;
   const resume = data.data[0] || {};
   const skills = resume.skills || [];
@@ -7,6 +8,7 @@
 
 <div class="resume_body">
   <div class="contact">
+    <img class="avatar" src={PUBLIC_PROFILE_IMAGE_URL} alt="profile" />
     <h1>{resume.name}</h1>
     <div>{resume.city}</div>
     <div>{resume.email}</div>
@@ -17,7 +19,7 @@
     <h2>Skills</h2>
     <div class="skills_list">
       {#each skills as skill}
-        <span class="skill">{skill}</span>
+        <span class="skill">{skill} <span class="skill_seperator">&#149;</span></span>
       {/each}
     </div>
   </div>
@@ -54,11 +56,15 @@
   }
 
   .contact {
-    text-align: right;
+    text-align: center;
+  }
+
+  .avatar {
+    border-radius: 50%;
   }
 
   span.skill {
-    margin: 5px;
+    margin: 0;
   }
 
   span.skill span:first-child {
@@ -67,6 +73,14 @@
 
   span.skill span:last-child {
     margin-right: 0;
+  }
+
+  span.skill span.skill_seperator {
+    margin-right: 5px;
+  }
+
+  span.skill:last-child span.skill_seperator {
+    display: none;
   }
 
   @media only screen and (max-width: 800px) {
