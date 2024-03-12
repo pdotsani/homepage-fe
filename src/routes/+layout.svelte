@@ -17,7 +17,7 @@
   .navigation {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
 
   a {

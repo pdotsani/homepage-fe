@@ -45,7 +45,15 @@
 
 <style>
   .contact, .skills, .experience {
-    width: 100%;
+    min-width: 400px;
+    background: cornsilk;
+    color: black;
+    padding: 15px;
+    box-shadow:   -10px 0 0 0 bisque,
+                 10px 0 0 0 bisque,
+                 0 -10px 0 0 bisque,
+                 0 10px 0 0 bisque;
+
   }
 
   .skills h2, .experience h2, .skills_list, .experience_list {
@@ -54,7 +62,10 @@
 
   .resume_body {
     margin: 0 auto;
-    max-width: 70vw;
+    max-width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .contact {
@@ -72,6 +83,11 @@
 
   .avatar {
     border-radius: 50%;
+    border: 2px solid green;
+  }
+
+  .skills {
+    margin-bottom: 50px;
   }
 
   span.skill {
@@ -96,7 +112,7 @@
 
   .experience_list .start_and_end_date {
     font-style: italic;
-    color: cornsilk;
+    color: gray;
   }
 
   @media only screen and (max-width: 800px) {

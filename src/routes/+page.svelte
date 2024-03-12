@@ -6,7 +6,6 @@
 <style>
   .home_body {
     margin: 0 auto;
-    max-width: 70vw;
   }
 
   h1 {
